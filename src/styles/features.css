@@ -1,0 +1,215 @@
+.auth {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: 100dvh;
+}
+
+.auth__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: var(--pitch);
+  color: var(--chalk);
+}
+
+.auth__brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.auth__lines {
+  width: 100%;
+  max-width: 44rem;
+  stroke: var(--chalk);
+  stroke-width: 1.5;
+}
+
+.auth__headline {
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.auth__main {
+  display: grid;
+  place-items: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.auth__form {
+  width: min(24rem, 100%);
+}
+
+.auth__switch {
+  text-align: center;
+}
+
+.court-lines {
+  display: block;
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.court-lines-animated * {
+  stroke-dasharray: 1;
+  animation: line-draw 1.4s ease-out both;
+}
+
+@keyframes line-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: var(--space-8);
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-12);
+}
+
+.feed__main {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.feed__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.feed__count {
+  color: var(--ink-soft);
+}
+
+.feed__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
+  gap: var(--space-4);
+  transition: opacity 0.15s;
+}
+
+.feed__grid--stale {
+  opacity: 0.5;
+}
+
+.court-card__surface {
+  padding: var(--space-3);
+  color: var(--chalk);
+  stroke: currentColor;
+}
+
+.court-card__surface .court-lines {
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.court-card--soccer .court-card__surface {
+  background: var(--pitch);
+}
+
+.court-card--basketball .court-card__surface {
+  background: var(--hardwood);
+}
+
+.court-card--other .court-card__surface {
+  background: var(--ink-soft);
+}
+
+.court-card__body {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+
+.court-card__facts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.court-card__price {
+  font-weight: 600;
+}
+
+.court-card__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.court-card__actions .btn {
+  flex: 1;
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.facts > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  color: var(--ink-soft);
+}
+
+.facts dd {
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 56rem) {
+  .auth {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    min-height: 100dvh;
+  }
+
+  .auth__panel {
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .auth__lines {
+    display: none;
+  }
+
+  .auth__headline {
+    max-width: none;
+    font-size: 2rem;
+  }
+
+  .feed {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-6) var(--space-4) var(--space-8);
+  }
+
+  .navbar {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .user-menu__name {
+    display: none;
+  }
+}

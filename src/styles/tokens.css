@@ -1,0 +1,26 @@
+:root {
+  --ink: #12211c;
+  --ink-soft: #4b5f57;
+  --field: #eaf0ec;
+  --surface: #ffffff;
+  --line: #cfdad3;
+  --pitch: #0b5d43;
+  --pitch-deep: #073f2e;
+  --chalk: #f4f8f5;
+  --floodlight: #f4d81c;
+  --floodlight-deep: #dcc108;
+  --hardwood: #a9591a;
+  --danger: #b3261e;
+  --danger-soft: #fbe9e7;
+  --success-soft: #dcefe4;
+  --font-display: var(--font-barlow-condensed, "Barlow Condensed"), "Arial Narrow", sans-serif;
+  --font-body: var(--font-barlow, "Barlow"), system-ui, sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --radius: 4px;
+}
